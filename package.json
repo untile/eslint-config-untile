@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-untile",
+  "name": "@untile/eslint-config-untile",
   "version": "0.0.0",
   "description": "Untile-flavored ESLint config",
   "keywords": [
