@@ -5,7 +5,7 @@ Untile-flavored ESLint config.
 ## Installation
 
 ```sh
-$ npm install eslint eslint-config-untile --save-dev
+$ npm install eslint @untile/eslint-config-untile --save-dev
 ```
 
 ## Usage
