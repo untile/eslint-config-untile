@@ -31,3 +31,12 @@ and run the linter with:
 ```sh
 $ npm run lint
 ```
+
+## Releases
+
+Be sure to have configured `GITHUB_TOKEN` in your globals.
+
+```bash
+npm version [<new version> | major | minor | patch] -m "Release %s"
+git push origin master && git push --tags
+```
