@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.3](https://github.com/untile/eslint-config-untile/releases/tag/v0.0.3) (2021-03-29)
+- Update README.md [\#4](https://github.com/untile/eslint-config-untile/pull/4) ([abelsoares](https://github.com/abelsoares))
+
 ## [v0.0.2](https://github.com/untile/eslint-config-untile/releases/tag/v0.0.2) (2021-03-26)
 - Update release workflow github token [\#3](https://github.com/untile/eslint-config-untile/pull/3) ([abelsoares](https://github.com/abelsoares))
 
