@@ -818,6 +818,13 @@ eslint-plugin-jest@24.3.2:
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
+eslint-plugin-lodash@^7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-lodash/-/eslint-plugin-lodash-7.3.0.tgz#02bbb2c39a8b28f73daf01f99b2d83bcc7f11a79"
+  integrity sha512-FQM8HklruJzulPawX3uZqWbeyN3bQT4hjVCpFYMrWo0Hdz1qDCwp1v3JS4zjhdssAXdwCxdnyrNMCZJK70GeUQ==
+  dependencies:
+    lodash "^4.17.21"
+
 eslint-plugin-mocha@5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-mocha/-/eslint-plugin-mocha-5.3.0.tgz#cf3eb18ae0e44e433aef7159637095a7cb19b15b"

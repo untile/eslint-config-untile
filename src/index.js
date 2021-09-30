@@ -11,10 +11,14 @@ module.exports = {
     mocha: true,
     node: true
   },
-  extends: ['eslint:recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:lodash/recommended'
+  ],
   parser: 'babel-eslint',
   plugins: [
     'jest',
+    'lodash',
     'mocha',
     'new-with-error',
     'sort-destructure-keys',
@@ -73,6 +77,9 @@ module.exports = {
     'keyword-spacing': 'error',
     'linebreak-style': 'error',
     'lines-around-comment': 'off',
+    'lodash/prefer-constant': 'off',
+    'lodash/prefer-immutable-method': 'off',
+    'lodash/prefer-lodash-method': 'off',
     'max-depth': 'error',
     'max-nested-callbacks': 'off',
     'max-params': ['error', 4],
