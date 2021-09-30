@@ -1,3 +1,5 @@
+/* eslint-disable lodash/prefer-noop */
+
 // Avoid extra `no-unused-vars` violations.
 function noop() {
   // Do nothing

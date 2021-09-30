@@ -2,6 +2,7 @@
 
 /* eslint-disable jest/no-disabled-tests */
 /* eslint-disable jest/no-focused-tests */
+/* eslint-disable lodash/prefer-noop */
 after();
 afterAll();
 afterEach();
