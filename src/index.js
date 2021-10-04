@@ -128,6 +128,10 @@ module.exports = {
     'no-process-env': 'error',
     'no-process-exit': 'error',
     'no-proto': 'error',
+    'no-restricted-imports': ['error', {
+      message: 'Please import individual modules from \'lodash/*\' instead.',
+      name: 'lodash'
+    }],
     'no-restricted-modules': 'error',
     'no-return-assign': 'error',
     'no-script-url': 'error',
