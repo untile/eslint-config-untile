@@ -65,6 +65,7 @@ describe('eslint-config-untile', () => {
       'no-undef',
       'no-underscore-dangle',
       'no-unused-vars',
+      'no-restricted-imports',
       'sort-imports-es6/sort-imports-es6',
       'sort-keys',
       'sql-template/no-unsafe-query'

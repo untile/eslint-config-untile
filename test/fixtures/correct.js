@@ -291,12 +291,13 @@ for (let semiSpacing = 0; semiSpacing < 10; ++semiSpacing) {
   noop();
 }
 
-// `sort-imports`.
+// `sort-imports` and `no-rescrited-imports`.
 import 'import-1';
 import * as Import6 from 'import-2';
 import { Import5, import4 } from 'import-3';
 import { import3 } from 'import-4';
 import Import2 from 'import-5';
+import get from 'lodash/get';
 import import1 from 'import-6';
 
 noop(Import2);
@@ -305,6 +306,7 @@ noop(Import6);
 noop(import1);
 noop(import3);
 noop(import4);
+noop(get);
 
 // `sort-keys`.
 const sortObjectProps = {
