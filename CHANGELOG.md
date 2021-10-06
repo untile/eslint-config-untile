@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.4](https://github.com/untile/eslint-config-untile/releases/tag/v0.0.4) (2021-10-06)
+- Add no-restricted-imports rule for general lodash imports [\#7](https://github.com/untile/eslint-config-untile/pull/7) ([luisdralves](https://github.com/luisdralves))
+
 ## [v0.0.3](https://github.com/untile/eslint-config-untile/releases/tag/v0.0.3) (2021-03-29)
 - Update README.md [\#4](https://github.com/untile/eslint-config-untile/pull/4) ([abelsoares](https://github.com/abelsoares))
 
