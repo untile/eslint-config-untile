@@ -44,15 +44,15 @@
   },
   "devDependencies": {
     "@uphold/github-changelog-generator": "^1.0.1",
-    "eslint": "^7.22.0",
+    "eslint": "^7.32.0",
     "lint-staged": "^10.5.4",
     "mocha": "^7.1.1",
     "pre-commit": "^1.2.2",
     "should": "13.2.3",
-    "sort-package-json": "^1.49.0"
+    "sort-package-json": "^1.52.0"
   },
   "peerDependencies": {
-    "eslint": "^7.22.0"
+    "eslint": "^7.32.0"
   },
   "engines": {
     "node": ">=10.23.2"
