@@ -74,6 +74,10 @@ module.exports = {
     'linebreak-style': 'error',
     'lines-around-comment': 'off',
     'max-depth': 'error',
+    'max-len': ['warn', {
+      code: 80,
+      ignorePattern: '(^\\s*if.*|useState|useReducer|\\s\\?{1,2}\\s|(=|:)[\\s\\[]*(\'.*\'|".*"))'
+    }],
     'max-nested-callbacks': 'off',
     'max-params': ['error', 4],
     'mocha/no-exclusive-tests': 'error',
