@@ -72,8 +72,15 @@ module.exports = {
     'key-spacing': 'error',
     'keyword-spacing': 'error',
     'linebreak-style': 'error',
-    'lines-around-comment': 'off',
+    'lines-around-comment': ['error', {
+      afterBlockComment: true,
+      beforeBlockComment: true
+    }],
     'max-depth': 'error',
+    'max-len': ['warn', {
+      code: 80,
+      ignorePattern: '(^\\s*if.*|useState|useReducer|\\s\\?{1,2}\\s|(=|:)[\\s\\[]*(\'.*\'|".*"))'
+    }],
     'max-nested-callbacks': 'off',
     'max-params': ['error', 4],
     'mocha/no-exclusive-tests': 'error',
@@ -163,10 +170,19 @@ module.exports = {
     'operator-assignment': 'error',
     'operator-linebreak': ['error', 'none'],
     'padded-blocks': ['error', { blocks: 'never', classes: 'always', switches: 'never' }],
-    'padding-line-between-statements': [
-      'error',
+    'padding-line-between-statements': ['error',
       { blankLine: 'always', next: '*', prev: ['const', 'let', 'var'] },
-      { blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] }
+      { blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] },
+      { blankLine: 'always', next: '*', prev: [
+        'multiline-expression',
+        'multiline-block-like',
+        'multiline-const',
+        'multiline-let'
+      ] },
+      { blankLine: 'always', next: [
+        'block-like',
+        'multiline-block-like'
+      ], prev: '*' }
     ],
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
