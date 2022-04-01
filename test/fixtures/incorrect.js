@@ -103,6 +103,25 @@ if (keywordSpacing) {
   keywordSpacing = false;
 }
 
+// `max-len`.
+import colors, { blue, cyan, green, pink, prussianBlue, red, rose, yellow } from 'imported';
+const veryLongConstNameThisIsUnreasonablyLongWeCannotAllowThisSeriously = 10101010;
+
+noop({
+  blue,
+  colors,
+  cyan,
+  green,
+  pink,
+  prussianBlue,
+  red,
+  rose,
+  veryLongConstNameThisIsUnreasonablyLongWeCannotAllowThisSeriously,
+  yellow
+});
+
+noop('If a string is too long for one line, it must be assigned to a variable first and not used directly');
+
 // `new-cap`.
 const cap = require('cap');
 

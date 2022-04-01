@@ -125,6 +125,13 @@ describe('noExclusiveTests', () => {
 // `key-spacing`.
 noop({ foo: 'bar' });
 
+// `max-len`.
+const veryLongString = 'This string is very long but strings are an exception to this rule';
+
+if (veryLongString.includes('Conditions can get complex') || veryLongString.includes('so they are also an exception')) {
+  noop(veryLongString);
+}
+
 // `new-cap`.
 const Cap = require('cap');
 const newCap = new Cap();
