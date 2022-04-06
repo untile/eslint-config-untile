@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/untile/eslint-config-untile.git"
+    "url": "https://github.com/untile/eslint-config-untile.git"
   },
   "license": "MIT",
   "author": "Untile",
