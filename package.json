@@ -19,7 +19,7 @@
   "author": "Untile",
   "main": "src",
   "scripts": {
-    "changelog": "github-changelog-generator --future-release=v$npm_package_version > CHANGELOG.md",
+    "changelog": "echo \"$(github-changelog-generator --future-release=v$npm_package_version)\n$(tail -n +2 CHANGELOG.md)\" > CHANGELOG.md",
     "lint": "eslint src test/index.js",
     "lint-staged": "lint-staged",
     "test": "mocha $npm_package_options_mocha",
@@ -43,7 +43,7 @@
     "eslint-plugin-switch-case": "^1.1.2"
   },
   "devDependencies": {
-    "@uphold/github-changelog-generator": "^1.0.1",
+    "@uphold/github-changelog-generator": "^3.0.0",
     "eslint": "^7.32.0",
     "lint-staged": "^10.5.4",
     "mocha": "^7.1.1",
