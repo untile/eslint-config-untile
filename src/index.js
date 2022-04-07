@@ -165,8 +165,17 @@ module.exports = {
     'padded-blocks': ['error', { blocks: 'never', classes: 'always', switches: 'never' }],
     'padding-line-between-statements': [
       'error',
-      { blankLine: 'always', next: '*', prev: ['const', 'let', 'var'] },
-      { blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] }
+      { blankLine: 'never', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] },
+      { blankLine: 'always', next: '*', prev: [
+        'multiline-expression',
+        'multiline-block-like',
+        'multiline-const',
+        'multiline-let'
+      ] },
+      { blankLine: 'always', next: [
+        'block-like',
+        'multiline-block-like'
+      ], prev: '*' }
     ],
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
