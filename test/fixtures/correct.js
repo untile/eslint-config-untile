@@ -257,8 +257,16 @@ noop(new PaddedBlocks());
 
 // `padding-line-between-statements`.
 const paddingLineBetweenStatements = 'foo';
+const paddingLineBetweenStatementsSingle = 'bar';
+const paddingLineBetweenStatementsMulti = {
+  foo: 'bar'
+};
 
-noop(paddingLineBetweenStatements);
+const paddingLineBetweenStatementsSingleAgain = 'bar';
+
+if (paddingLineBetweenStatementsSingle.includes(paddingLineBetweenStatementsMulti)) {
+  noop(paddingLineBetweenStatements, paddingLineBetweenStatementsSingleAgain);
+}
 
 // `quote-props`.
 const quoteProps = {
@@ -343,6 +351,7 @@ noop(spaceUnaryOps2);
 const db = {
   query: noop()
 };
+
 const foo = 'foo';
 const sql = 'sql-tag';
 
