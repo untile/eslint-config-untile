@@ -221,6 +221,8 @@ noop(new NoUnderscoreDangle());
 // `no-unused-vars`.
 const foobar = '';
 
+noop();
+
 // `object-curly-spacing`.
 const objectCurlySpacing = { foo: 'bar' };
 
@@ -260,7 +262,15 @@ noop(new PaddedBlocks());
 // `padding-line-between-statements`.
 const paddingLineBetweenStatements = 'foo';
 
-noop(paddingLineBetweenStatements);
+const paddingLineBetweenStatementsSingle = 'bar';
+
+const paddingLineBetweenStatementsMulti = {
+  foo: 'bar'
+};
+const paddingLineBetweenStatementsSingleAgain = 'bar';
+if (paddingLineBetweenStatementsSingle.includes(paddingLineBetweenStatementsMulti)) {
+  noop(paddingLineBetweenStatements, paddingLineBetweenStatementsSingleAgain);
+}
 
 // `quote-props`.
 const quoteProps = {
@@ -342,6 +352,7 @@ noop(spaceUnaryOps2);
 const db = {
   query: noop()
 };
+
 const foo = 'foo';
 
 db.query(`SELECT ${foo} FROM bar`);
