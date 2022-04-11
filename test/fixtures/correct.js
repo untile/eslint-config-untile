@@ -125,6 +125,21 @@ describe('noExclusiveTests', () => {
 // `key-spacing`.
 noop({ foo: 'bar' });
 
+// `lines-around-comment`.
+
+/**
+ * Foo.
+ */
+
+const linesAroundCommentFoo = 1;
+
+/**
+ * Bar.
+ */
+
+const linesAroundCommentBar = number => number + 2;
+noop(linesAroundCommentBar(linesAroundCommentFoo));
+
 // `new-cap`.
 const Cap = require('cap');
 const newCap = new Cap();
