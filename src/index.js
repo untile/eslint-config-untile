@@ -72,7 +72,10 @@ module.exports = {
     'key-spacing': 'error',
     'keyword-spacing': 'error',
     'linebreak-style': 'error',
-    'lines-around-comment': 'off',
+    'lines-around-comment': ['error', {
+      afterBlockComment: true,
+      beforeBlockComment: true
+    }],
     'max-depth': 'error',
     'max-nested-callbacks': 'off',
     'max-params': ['error', 4],
@@ -165,7 +168,7 @@ module.exports = {
     'padded-blocks': ['error', { blocks: 'never', classes: 'always', switches: 'never' }],
     'padding-line-between-statements': [
       'error',
-      { blankLine: 'never', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] },
+      { blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] },
       { blankLine: 'always', next: '*', prev: [
         'multiline-expression',
         'multiline-block-like',
