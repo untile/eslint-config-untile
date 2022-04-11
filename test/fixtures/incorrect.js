@@ -103,6 +103,19 @@ if (keywordSpacing) {
   keywordSpacing = false;
 }
 
+// `lines-around-comment`.
+
+/**
+ * Foo.
+ */
+const linesAroundCommentFoo = 1;
+/**
+ * Bar.
+ */
+
+const linesAroundCommentBar = number => number + 2;
+noop(linesAroundCommentBar(linesAroundCommentFoo));
+
 // `new-cap`.
 const cap = require('cap');
 
