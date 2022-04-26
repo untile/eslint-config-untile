@@ -22,15 +22,17 @@
     "changelog": "echo \"$(github-changelog-generator --future-release=v$npm_package_version)\n$(tail -n +2 CHANGELOG.md)\" > CHANGELOG.md",
     "lint": "eslint src test/index.js",
     "lint-staged": "lint-staged",
+    "prepare": "husky install",
     "test": "mocha $npm_package_options_mocha",
     "version": "npm run changelog && git add -A CHANGELOG.md"
   },
-  "pre-commit": [
-    "lint-staged"
-  ],
   "lint-staged": {
-    "src/**/*.js": "eslint",
-    "package.json": "sort-package-json"
+    "*.js": [
+      "eslint"
+    ],
+    "package.json": [
+      "sort-package-json"
+    ]
   },
   "dependencies": {
     "babel-eslint": "10.1.0",
@@ -43,21 +45,27 @@
     "eslint-plugin-switch-case": "^1.1.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@untile/commitlint-config-untile": "^1.0.0",
     "@uphold/github-changelog-generator": "^3.0.0",
     "eslint": "^7.32.0",
-    "lint-staged": "^10.5.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
     "mocha": "^7.1.1",
-    "pre-commit": "^1.2.2",
     "should": "13.2.3",
-    "sort-package-json": "^1.52.0"
+    "sort-package-json": "^1.55.0"
   },
   "peerDependencies": {
     "eslint": "^7.32.0"
   },
   "engines": {
-    "node": ">=10.23.2"
+    "node": ">=14.17.0"
   },
   "options": {
     "mocha": "-t 10000 --require should test"
+  },
+  "validate-branch-name": {
+    "pattern": "^(master|development){1}$|^(bugfix|dependabot|enhancement|feature|hotfix|release|support)/.+$",
+    "errorMsg": "Only the following prefixes are allowed: bugfix|dependabot|enhancement|feature|hotfix|release|support"
   }
 }

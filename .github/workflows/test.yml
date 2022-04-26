@@ -20,7 +20,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '14.3.0'
+          node-version: '14.17.0'
 
       - name: Setup module dependencies cache
         uses: actions/cache@v2
@@ -36,3 +36,8 @@ jobs:
 
       - name: Test
         run: yarn test
+
+      - name: Lint commits
+        uses: wagoid/commitlint-github-action@v4
+        with:
+          configFile: .commitlintrc.js

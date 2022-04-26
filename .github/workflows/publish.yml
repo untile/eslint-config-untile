@@ -21,8 +21,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
-          registry-url: https://registry.npmjs.org/
+          node-version: '14.17.0'
 
       - name: Install module dependencies
         run: yarn
