@@ -12,14 +12,16 @@ module.exports = {
     node: true
   },
   extends: ['eslint:recommended'],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false
+  },
   plugins: [
     'jest',
     'mocha',
     'new-with-error',
     'sort-destructure-keys',
     'sort-imports-es6',
-    'sql-template',
     'switch-case'
   ],
   root: true,
@@ -37,7 +39,7 @@ module.exports = {
     'capitalized-comments': ['error', 'always', {
       ignoreConsecutiveComments: true
     }],
-    'comma-dangle': 'error',
+    'comma-dangle': ['error', 'never'],
     'comma-spacing': 'error',
     'comma-style': 'error',
     complexity: 'off',
@@ -210,7 +212,6 @@ module.exports = {
     'space-infix-ops': 'error',
     'space-unary-ops': 'error',
     'spaced-comment': 'error',
-    'sql-template/no-unsafe-query': 'error',
     strict: 'off',
     'switch-case/newline-between-switch-case': ['error', 'always', { fallthrough: 'never' }],
     'template-curly-spacing': 'error',

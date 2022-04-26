@@ -1,1 +1,8 @@
-module.exports = require('./src');
+
+/**
+ * Export eslint config.
+ */
+
+module.exports = {
+  extends: ['./src']
+};
