@@ -71,8 +71,7 @@ describe('eslint-config-untile', () => {
       'padding-line-between-statements',
       'no-restricted-imports',
       'sort-imports-es6/sort-imports-es6',
-      'sort-keys',
-      'sql-template/no-unsafe-query'
+      'sort-keys'
     ]);
   });
 });

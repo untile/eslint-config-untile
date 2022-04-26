@@ -362,17 +362,6 @@ noop(spaceUnaryOps2);
 // `spaced-comment`.
 // Spaced comment.
 
-// `sql-template/no-unsafe-query`.
-const db = {
-  query: noop()
-};
-
-const foo = 'foo';
-const sql = 'sql-tag';
-
-db.query(sql`SELECT ${foo} FROM bar`);
-db.query(`SELECT foo FROM bar`);
-
 // `switch-case/newline-between-switch-case`.
 switch (true) {
   case 'foobar':
